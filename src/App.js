@@ -1,6 +1,6 @@
 import './App.css';
 import {  Switch, Route } from 'react-router-dom';
-import { Login, ResetPassword } from './components';
+import { Login, ResetPassword, StudentPortal } from './components';
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Switch>
         <Route path="/login" component={Login} />
         <Route path="/reset-password" component={ResetPassword} />
+        <Route path="/student-portal" component={StudentPortal} />
       </Switch>
     </div>
   );

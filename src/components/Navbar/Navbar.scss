@@ -1,0 +1,164 @@
+.navbar {
+    width: 100%;
+    padding: 20px 20px;
+    background-color: var(--main-color);
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 0 0 50px 50px;
+
+    .top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 20px;
+
+        .topLogo {
+            font-weight: 600;
+            font-size: 20px;
+            color: white;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            .moreContents {
+
+                span {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: white;
+    
+                    &.optChoice {
+                        margin-left: 10px;
+                    }
+                }
+    
+                .profileContent {
+                    display: none;
+
+                    span {
+                        color: white;
+                        padding: 5px 10px;
+                    }
+                }
+                
+                &:hover {
+                    .profileContent {
+                        display: flex;
+                        flex-direction: column;
+                        z-index: 999;
+                        background-color: #000;
+                        padding: 15px 5px;
+                        position: absolute;
+                        top: 15px;
+                        right: 10px;
+                        border-radius: 7px;
+                        transition: all .35s ease-in-out;
+                    }
+                }
+            }
+
+
+            .profile_pic {
+                display: flex;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    top: 0;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .nav-bottom {
+        height: 30px;
+        .studentInfo {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            position: absolute;
+            top: 70px;
+            left: 150px;
+            background-color: #fff;
+            border-radius: 50px;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+
+            span {
+                padding: 5px 20px;
+            }
+        }
+
+        .nameSpan {
+            padding: 10px;
+            background-color: var(--main-color);
+            color: white;
+            position: absolute;
+            top: 220px;
+            left: 162px;
+            border-radius: 10px;
+        }
+
+        .reg_no {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 3px;
+            width: fit-content;
+            position: absolute;
+            top: 90px;
+            left: calc((100vw / 2) - 100px);
+            margin: auto;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+
+            .nav-id {
+                border-radius: 10px;
+                padding: 5px;
+                flex: 1;
+                background-color: var(--main-color);
+
+                span {
+                    color: white;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+
+            .nav-id-no {
+                flex: 5;
+
+                span {
+                    padding: 10px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .profilePic {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            position: absolute;
+            top: 70px;
+            right: 150px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 50px;
+            width: 250px;
+            height: 190px;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 50px;
+            }
+        }
+    }
+}
