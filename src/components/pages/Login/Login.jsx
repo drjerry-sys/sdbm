@@ -1,31 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './Login.scss';
 import logo from '../../../assets/images/myLogo.png';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
 
+    const [password, setPassword] = useState('');
+    const [regNo, setRegNo] = useState('');
+    const [title, setTitle] = useState(true);
+
+    const handleSubmit = () => {
+        alert(password, regNo, title)
+    };
+
     return ( 
         <div className="login">
             <div className="top">
-                <img src={logo} alt="sdbm" />
+                <div className="img">
+                    <img src={logo} alt="sdbm" />
+                </div>
             </div>
             <div className="container">
-                <span>Login</span>
+                <h2>Login</h2>
                 <div className="detailsWrapper">
-                    <span>student</span>
+                    <span className="title">{title ? 'student' : 'staff'}</span>
                     <form>
-                        <label htmlFor="regNo">Reg No:</label>
-                        <input type="text" id="regNo" />
-                        <label htmlFor="password">Password</label>
-                        <input type="password" id="password" />
-                        <input type="submit" value="submit" />
-                        <span>forgot password? click to <Link to="/reset-password">reset password</Link></span>
+                        <input type="text" className="regDetails" placeholder="Registration No" value={regNo} onChange={(e)=>setRegNo(e.target.value)} />
+                        <input type="password" className="regDetails" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+                        <div className="choice">
+                            <span>Login as:</span>
+                            <input type="radio" checked={title} name="student" onChange={()=>setTitle(true)} /><span>student</span>
+                            <input type="radio" checked={!title} name={false} onChange={()=>setTitle(false)} /><span>staff</span>
+                        </div>
+                        <button className="submit" onClick={handleSubmit}>submit</button>
+                        <span className="forgot">forgot password? click to <Link to="/reset-password">reset password</Link></span>
                     </form>
-                    <div className="choice">
-                        <span>Login as:</span>
-                        <button className="student">Student</button>
-                        <button className="staff">Staff</button>
-                    </div>
                 </div>
             </div>
             <div className="bottom">

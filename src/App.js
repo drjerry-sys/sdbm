@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/login" component={<Login />} />
-        <Route path="/reset-password" component={<ResetPassword />} />
+        <Route path="/login" component={Login} />
+        <Route path="/reset-password" component={ResetPassword} />
       </Switch>
     </div>
   );
