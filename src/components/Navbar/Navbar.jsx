@@ -7,7 +7,10 @@ const Navbar = ({ portalType }) => {
     return ( 
         <div className="navbar">
             <div className="top">
-                <span className="topLogo">Essence</span>
+                <Link to="/" className="topLogo"><span>Essence</span></Link>
+                <span style={{color: 'white', display: 'flex', alignItems: 'center'}}>
+                    {portalType === 'student' ? 'Student' : portalType === 'staff' ? 'Staff' : 'Admin'} Portal
+                </span>
                 <div className="profile">
                     <div className="profile_pic">
                         <img src={profilePic} alt="profile pic" />

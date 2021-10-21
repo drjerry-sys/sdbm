@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import Navbar from '../../Navbar/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './StudentPortal.scss';
+import Footer from '../../Footer/Footer';
+import Options from './Options';
+import TableForResults from './TableForResults';
 
 const StudentPortal = () => {
 
     const [optionSelected, setOptionSelected] = useState('updt');
 
+    const {option} = useParams();
+
     const handleSelect = (value) => {
-        setOptionSelected(value)
+        setOptionSelected(value);
     }
 
     return ( 
@@ -28,79 +33,12 @@ const StudentPortal = () => {
                         <Link to="/student-portal/attendance" onClick={() => handleSelect('attend')} className="groupBtn">Attendance</Link>
                         <Link to="/student-portal/chat" onClick={() => handleSelect('chat')} className="groupBtn">Chat Room</Link>
                     </div>
-                    <div className="portalSubOptions">
-                        {
-                            optionSelected === 'res' ? (
-                                <>
-                                    <Link className="subLink">All Results</Link >
-                                    <Link className="subLink">Recent Term</Link >
-                                    <Link className="subLink">Recent Session</Link >
-                                </>
-                            ) : optionSelected === 'cbt' ? (
-                                <>
-                                    <Link className="subLink">All Results</Link>
-                                    <Link className="subLink">Recent Term</Link>
-                                    <Link className="subLink">Recent Session</Link>
-                                </>
-                            ) : optionSelected === 'pay' ? (
-                                <>
-                                    <Link className="subLink">All Results</Link>
-                                    <Link className="subLink">Recent Term</Link>
-                                    <Link className="subLink">Recent Session</Link>
-                                </>
-                            ) : optionSelected === 'sub' ? (
-                                <>
-                                    <Link className="subLink">All Results</Link>
-                                    <Link className="subLink">Recent Term</Link>
-                                    <Link className="subLink">Recent Session</Link>
-                                </>
-                            ) : optionSelected === 'attend' ? (
-                                <>
-                                    <Link className="subLink">All Results</Link>
-                                    <Link className="subLink">Recent Term</Link>
-                                    <Link className="subLink">Recent Session</Link>
-                                </>
-                            ) : optionSelected === 'chat' ? (
-                                <>
-                                    <Link className="subLink">All Results</Link>
-                                    <Link className="subLink">Recent Term</Link>
-                                    <Link className="subLink">Recent Session</Link>
-                                </>
-                            ) : optionSelected === 'updt' ? (
-                                <>
-                                    <Link className="subLink">Notice</Link>
-                                    <Link className="subLink">Recent Updates</Link>
-                                    <Link className="subLink">Recent Session</Link>
-                                </>
-                            ) : ''
-                        }
-                    </div>
+                    <Options optionSelected={optionSelected} />
                     <span className="currentTitle">Third Term 2018/2019</span>
-                    <table>
-                        <tr>
-                            <th>S/N</th>
-                            <th>Subjects</th>
-                            <th>Test</th>
-                            <th>Exam</th>
-                            <th>Grade</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Sanni</td>
-                            <td>Adetayo</td>
-                            <td>Exam</td>
-                            <td>A+</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Sanni</td>
-                            <td>Adetayo</td>
-                            <td>Exam</td>
-                            <td>A+</td>
-                        </tr>
-                    </table>
+                    { option === 'results' ? <TableForResults /> : '' }
                 </div>
             </div>
+            <Footer />
         </>
      );
 }

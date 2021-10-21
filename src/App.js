@@ -8,7 +8,8 @@ function App() {
       <Switch>
         <Route path="/login" component={Login} />
         <Route path="/reset-password" component={ResetPassword} />
-        <Route path="/student-portal" component={StudentPortal} />
+        <Route exact path="/student-portal" component={StudentPortal} />
+        <Route path="/student-portal/:option" component={StudentPortal} />
       </Switch>
     </div>
   );
