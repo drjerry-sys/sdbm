@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../../Navbar/Navbar';
+import { Link } from 'react-router-dom';
 
 const StudentPortal = () => {
     return ( 
@@ -9,15 +10,15 @@ const StudentPortal = () => {
                 <p>Student Portal</p>
             </div>
             <div className="portalOptions">
-                <ul>
-                    <li>Results</li>
-                    <li>Exam/Test</li>
-                    <li>Payments</li>
-                    <li>Subjects/Books</li>
-                    <li>Attendance</li>
-                    <li>Chat Room</li>
-                    <li>Updates</li>
-                </ul>
+                <div className="buttonsGroup">
+                    <Link className="groupBtn">Results</Link>
+                    <Link className="groupBtn">Exam/Test</Link>
+                    <Link className="groupBtn">Payments</Link>
+                    <Link className="groupBtn">Subjects/Books</Link>
+                    <Link className="groupBtn">Attendance</Link>
+                    <Link className="groupBtn">Chat Room</Link>
+                    <Link className="groupBtn">Updates</Link>
+                </div>
             </div>
         </div>
      );
