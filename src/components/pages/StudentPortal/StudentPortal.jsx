@@ -6,7 +6,18 @@ const StudentPortal = () => {
         <div className="studentPortal">
             <Navbar portalType="student" />
             <div className="portalTitle">
-                <h3>Student Portal</h3>
+                <p>Student Portal</p>
+            </div>
+            <div className="portalOptions">
+                <ul>
+                    <li>Results</li>
+                    <li>Exam/Test</li>
+                    <li>Payments</li>
+                    <li>Subjects/Books</li>
+                    <li>Attendance</li>
+                    <li>Chat Room</li>
+                    <li>Updates</li>
+                </ul>
             </div>
         </div>
      );
