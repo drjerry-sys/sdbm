@@ -1,5 +1,5 @@
 import React from 'react';
-import './StudentPortal.scss';
+import './TableForResults.scss';
 
 const TableForResults = () => {
     return ( 
