@@ -32,7 +32,7 @@ const StudentPortal = () => {
                         <Link to="/student-portal/attendance" onClick={() => handleSelect('attend')} className="groupBtn">Attendance</Link>
                         <Link to="/student-portal/chat" onClick={() => handleSelect('chat')} className="groupBtn">Chat Room</Link>
                     </div>
-                    <Options optionSelected={optionSelected} />
+                    <Options optionSelected={optionSelected} exam="test" />
                     <span className="currentTitle">Third Term 2018/2019</span>
                     { 
                         option === 'results' ? <TableForResults /> : 
