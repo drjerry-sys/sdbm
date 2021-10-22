@@ -1,6 +1,6 @@
 import './App.css';
 import {  Switch, Route } from 'react-router-dom';
-import { Login, ResetPassword, StudentPortal } from './components';
+import { Login, ResetPassword, StudentPortal, StaffPortal } from './components';
 
 function App() {
   return (
@@ -10,6 +10,8 @@ function App() {
         <Route path="/reset-password" component={ResetPassword} />
         <Route exact path="/student-portal" component={StudentPortal} />
         <Route path="/student-portal/:option" component={StudentPortal} />
+        <Route exact path="/staff-portal" component={StaffPortal} />
+        <Route path="/staff-portal/:option" component={StaffPortal} />
       </Switch>
     </div>
   );

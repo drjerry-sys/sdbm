@@ -32,7 +32,7 @@
                     color: white;
     
                     &.optChoice {
-                        margin-left: 10px;
+                        margin-right: 10px;
                     }
                 }
     
@@ -113,7 +113,7 @@
             width: fit-content;
             position: absolute;
             top: 90px;
-            left: calc((100vw / 2) - 100px);
+            left: calc((100vw / 2) - 85px);
             margin: auto;
             box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
 

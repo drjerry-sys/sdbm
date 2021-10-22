@@ -1,0 +1,71 @@
+.mainPage {
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 200px;
+    background-color: rgb(212, 212, 212);
+    padding: 10px 10px;
+    margin-bottom: 40px;
+
+    .portalOptions {
+        padding: 7px 0 ;
+        width: 100%;
+
+        .buttonsGroup {
+            .groupBtn {
+                padding: 7px 10px;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 500;
+                background-color: #FFF688;
+                color: #000;
+                border: 1px solid darkgray;
+            }
+        }
+
+        .portalSubOptions {
+            padding: 14px 0px;
+
+            .subLink {
+                text-decoration: none;
+                border: 1px solid darkgray;
+                font-size: 14px;
+                padding: 7px 10px;
+                background-color: rgb(247, 245, 245);
+                font-weight: 500;
+                color: gray;
+            }
+        }
+    }
+
+    .currentTitle {
+        padding: 7px 20px;
+        border-radius: 5px;
+        background-color: gray;
+        font-weight: 800;
+        width: fit-content;
+        color: white;
+        line-height: 50px;
+        margin: auto;
+        font-size: 14px;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        background-color: #fff;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+}

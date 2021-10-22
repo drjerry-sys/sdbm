@@ -6,9 +6,7 @@ import Footer from '../../Footer/Footer';
 import { Options, TableForResults, Updates, Payments, Attendance, Chat, Subjects, CBT} from '.';
 
 const StudentPortal = () => {
-
-    const [optionSelected, setOptionSelected] = useState('updt');
-
+    
     const {option} = useParams();
 
     return ( 
