@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = ({ portalType }) => {
 
-    const personnel = portalType === 'student' ? 'Student' : portalType === 'staff' ? 'Staff' : 'Admin';
+    const personnel = portalType === 'student' ? 'Student Portal' : portalType === 'staff' ? 'Staff Portal' : portalType === 'admin' && 'Admin Portal';
     const studentStaffClass = portalType === 'student' ? 'class' : portalType === 'staff' && 'Teacher for'
 
     return ( 
@@ -13,7 +13,7 @@ const Navbar = ({ portalType }) => {
             <div className="top">
                 <Link to="/" className="topLogo"><span>Essence</span></Link>
                 <span style={{color: 'white', display: 'flex', alignItems: 'center'}}>
-                    {personnel} Portal
+                    {personnel} 
                 </span>
                 <div className="profile">
                     <div className="moreContents">
@@ -29,22 +29,26 @@ const Navbar = ({ portalType }) => {
                     </div>
                 </div>
             </div>
-            <div className="nav-bottom">
-                <div className="studentInfo">
-                    <span>status: online</span>
-                    <span>{studentStaffClass}: JSS 1A</span>
-                    <span>current term: 2nd</span>
-                    <span>current session: 2018/2019</span>
-                </div>
-                <span className="nameSpan">Adedeji Jeremiah Obaloluwa</span>
-                <div className="reg_no">
-                    <div className="nav-id"><span>ID</span></div>
-                    <div className="nav-id-no"><span>STD/2018/007</span></div>
-                </div>
-                <div className="profilePic">
-                    <img src={profilePic} alt="profile pic" />
-                </div>
-            </div>
+            {
+                portalType && (
+                    <div className="nav-bottom">
+                        <div className="studentInfo">
+                            <span>status: online</span>
+                            <span>{studentStaffClass}: JSS 1A</span>
+                            <span>current term: 2nd</span>
+                            <span>current session: 2018/2019</span>
+                        </div>
+                        <span className="nameSpan">Adedeji Jeremiah Obaloluwa</span>
+                        <div className="reg_no">
+                            <div className="nav-id"><span>ID</span></div>
+                            <div className="nav-id-no"><span>STD/2018/007</span></div>
+                        </div>
+                        <div className="profilePic">
+                            <img src={profilePic} alt="profile pic" />
+                        </div>
+                    </div>
+                )
+            }
         </div>
      );
 }

@@ -3,7 +3,7 @@ import Navbar from '../../Navbar/Navbar';
 import Footer from '../../Footer/Footer';
 import './StaffPortal.scss';
 import { Link, useParams } from 'react-router-dom';
-import { Options, Updates, AllStudents, Attendance, StaffChat, Subjects, SetExam } from '.';
+import { Options, Updates, AllStudents, Attendance, StaffChat, Subjects, SetExam, Performance } from '.';
 
 const StaffPortal = () => {
 
@@ -16,6 +16,7 @@ const StaffPortal = () => {
                 <div className="portalOptions">
                     <div className="buttonsGroup">
                         <Link to="/staff-portal/updates" className="groupBtn">Updates</Link>
+                        <Link to="/staff-portal/performance" className="groupBtn">Performance</Link>
                         <Link to="/staff-portal/set-exam" className="groupBtn">Set Exam/Test</Link>
                         <Link to="/staff-portal/all_students" className="groupBtn">All Students</Link>
                         <Link to="/staff-portal/subjects" className="groupBtn">Subjects/Books</Link>
@@ -26,6 +27,7 @@ const StaffPortal = () => {
                     <span className="currentTitle">Third Term 2018/2019</span>
                     { 
                         option === "updates" ? <Updates /> :
+                        option === "performance" ? <Performance /> :
                         option === "payments" ? <AllStudents /> :
                         option === "attendance" ? <Attendance /> :
                         option === "chat" ? <StaffChat /> :

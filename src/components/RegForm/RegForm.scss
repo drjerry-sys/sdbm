@@ -1,0 +1,35 @@
+.regform {
+
+    span {
+
+    }
+
+    .mainForm {
+        width: 70%;
+        margin: 0 auto;
+
+        .formTitle {
+            width: fit-content;
+            padding: 5px 30px;
+            border-radius: 7px;
+            font-size: 15px;
+            font-weight: 600;
+            margin: 10px auto;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+    
+            span {
+                padding: 10px auto;
+            }
+        }
+
+        .formBody {
+            margin: 0 20px;
+            background-color: rgb(226, 226, 226);
+
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+
+}
