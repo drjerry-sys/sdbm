@@ -1,19 +1,21 @@
 import React from 'react';
 import './StudentPortal.scss';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { CurrentUpdates, RecentUpdates, UpdateHistory } from './SubOption';
 
 const Options = ({ option, exam }) => {
 
     const paper = exam === "exam" ? 'Exam' : "Test";
+    const suboption = useParams();
 
     return ( 
         <div className="portalSubOptions">
             {
                 option === 'results' ? (
                     <>
-                        <Link className="subLink">All Results</Link >
-                        <Link className="subLink">Recent Term</Link >
-                        <Link className="subLink">Recent Session</Link >
+                        <Link to="/student-portal/results/recent" className="subLink">Recent Term</Link >
+                        <Link to="/student-portal/results/all_results" className="subLink">All Results</Link >
+                        <Link to="/student-portal/results/summary" className="subLink">Summary</Link >
                     </>
                 ) : option === 'cbt' ? (
                     <>
@@ -45,9 +47,9 @@ const Options = ({ option, exam }) => {
                     </>
                 ) : option === 'updates' ? (
                     <>
-                        <Link className="subLink">Notice</Link>
-                        <Link className="subLink">Recent Updates</Link>
-                        <Link className="subLink">Recent Session</Link>
+                        <Link to="/student-portal/updates/current-notice" className="subLink">Notice</Link>
+                        <Link to="/student-portal/updates/recent-notice" className="subLink">Recent Updates</Link>
+                        <Link to="/student-portal/updates/updates-history" className="subLink">Updates History</Link>
                     </>
                 ) : ''
             }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './TableForResults.scss';
+import './Summary.scss';
 
 const TableForResults = () => {
     return ( 

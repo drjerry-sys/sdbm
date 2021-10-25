@@ -9,8 +9,10 @@ const Login = () => {
     const [regNo, setRegNo] = useState('');
     const [title, setTitle] = useState(true);
 
+    const regNoPlaceHolder = title ? "Registration No" : 'Staff Id';
+
     const handleSubmit = () => {
-        alert(password, regNo, title)
+        alert(password+regNo+title)
     };
 
     return ( 
@@ -25,7 +27,7 @@ const Login = () => {
                 <div className="detailsWrapper">
                     <span className="title">{title ? 'student' : 'staff'}</span>
                     <form>
-                        <input type="text" className="regDetails" placeholder="Registration No" value={regNo} onChange={(e)=>setRegNo(e.target.value)} />
+                        <input type="text" className="regDetails" placeholder={regNoPlaceHolder} value={regNo} onChange={(e)=>setRegNo(e.target.value)} />
                         <input type="password" className="regDetails" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
                         <div className="choice">
                             <span>Login as:</span>

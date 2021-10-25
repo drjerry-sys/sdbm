@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.scss';
 import profilePic from '../../assets/images/profile-pic.jpg';
 import { Link } from 'react-router-dom';
@@ -6,7 +6,14 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ portalType }) => {
 
     const personnel = portalType === 'student' ? 'Student Portal' : portalType === 'staff' ? 'Staff Portal' : portalType === 'admin' && 'Admin Portal';
-    const studentStaffClass = portalType === 'student' ? 'class' : portalType === 'staff' && 'Teacher for'
+    const studentStaffClass = portalType === 'student' ? 'class' : portalType === 'staff' && 'Teacher for';
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    window.onscroll = () => {
+        setIsScrolled(window.pageYOffset);
+        return () => (window.onscroll = null);
+    };
 
     return ( 
         <div className="navbar">
@@ -30,7 +37,7 @@ const Navbar = ({ portalType }) => {
                 </div>
             </div>
             {
-                portalType && (
+                portalType && !isScrolled && (
                     <div className="nav-bottom">
                         <div className="studentInfo">
                             <span>status: online</span>
