@@ -1,6 +1,5 @@
-export { default as TableForResults } from './AllResults/AllResults';
+export { default as AllResults } from './AllResults/AllResults';
 export { default as Summary } from './Summary/Summary';
-export { default as RecentTerm } from './RecentTerm/RecentTerm';
 export { default as Updates } from './Updates/Updates';
 export { default as Payments } from './Payments/Payments';
 export { default as Options } from './Options';

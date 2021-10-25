@@ -11,7 +11,7 @@ const Navbar = ({ portalType }) => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     window.onscroll = () => {
-        setIsScrolled(window.pageYOffset);
+        setIsScrolled(window.pageYOffset > 78 ? true : false);
         return () => (window.onscroll = null);
     };
 

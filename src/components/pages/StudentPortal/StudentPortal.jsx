@@ -3,7 +3,7 @@ import Navbar from '../../Navbar/Navbar';
 import { Link, useParams } from 'react-router-dom';
 import './StudentPortal.scss';
 import Footer from '../../Footer/Footer';
-import { Options, TableForResults, Summary, RecentTerm, Updates, Payments, Attendance, Chat, Subjects, CBT} from '.';
+import { Options, AllResults, Summary, Updates, Payments, Attendance, Chat, Subjects, CBT} from '.';
 
 const StudentPortal = () => {
     
@@ -34,21 +34,20 @@ const StudentPortal = () => {
                     <Options option={option} exam="test" />
                     <span className="currentTitle">Third Term 2018/2019</span>
                     { 
-                        option === 'results' ? (
-                            <>
-                                {
+                        option === 'results' ? 
                                     suboption === "summary" ? <Summary />:
-                                    suboption === "all_results" ? <TableForResults />:
-                                    <RecentTerm />
-                                }
-                            </>
-                        ) : 
-                        option === "updates" ? <Updates /> :
+                                    suboption === "all_results" ? <AllResults />:
+                                    <AllResults term />: 
+                        option === "updates" ? 
+                                    suboption === "current-notice" ? <Updates type='today' />:
+                                    suboption === "recent-notice" ? <Updates type='latest' />:
+                                    suboption === "updates-history" ? <Updates type='history' />:
+                                    <Updates today />:
                         option === "payments" ? <Payments /> :
                         option === "attendance" ? <Attendance /> :
                         option === "chat" ? <Chat /> :
                         option === "subjects" ? <Subjects /> :
-                        option === "cbt" ? <CBT /> : <Updates />
+                        option === "cbt" ? <CBT /> : <Updates type='today' />
                      }
                 </div>
             </div>

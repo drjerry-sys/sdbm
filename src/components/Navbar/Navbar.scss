@@ -3,8 +3,9 @@
     padding: 20px 20px;
     background-color: var(--main-color);
     box-sizing: border-box;
-    // overflow: hidden;
     border-radius: 0 0 50px 50px;
+    position: fixed;
+    top: 0;
 
     .top {
         width: 100%;
