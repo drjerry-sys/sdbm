@@ -1,7 +1,8 @@
 export { default as AllResults } from './AllResults/AllResults';
 export { default as Summary } from './Summary/Summary';
 export { default as Updates } from './Updates/Updates';
-export { default as Payments } from './Payments/Payments';
+export { default as MakePayment } from './Payments/MakePayment';
+export { default as PaymentHistory } from './Payments/PaymentHistory/PaymentHistory';
 export { default as Options } from './Options';
 export { default as Attendance } from './Attendance/Attendance';
 export { default as Chat } from './Chat/Chat';

@@ -1,8 +1,8 @@
 import React from 'react';
-import './Updates.scss';
+import './PaymentHistory.scss';
 import moment from 'moment';
 
-const Updates = () => {
+const PaymentHistory = () => {
     const time = new Date()
     const allUpdates = [
         {id: 1, subject: 'Outstandings', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In sapiente eligendi earum! Vel ut, officiis nisi expedita dolorum illo praesentium asperiores rem odio quibusdam magni temporibus cum delectus, qui ullam.', datePosted: moment(time).startOf('ss').fromNow(), postedBy: 'Principal',},
@@ -31,4 +31,4 @@ const Updates = () => {
      );
 }
  
-export default Updates;
+export default PaymentHistory;

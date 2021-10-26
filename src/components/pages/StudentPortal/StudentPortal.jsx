@@ -3,7 +3,7 @@ import Navbar from '../../Navbar/Navbar';
 import { Link, useParams } from 'react-router-dom';
 import './StudentPortal.scss';
 import Footer from '../../Footer/Footer';
-import { Options, AllResults, Summary, Updates, Payments, Attendance, Chat, Subjects, CBT} from '.';
+import { Options, AllResults, Summary, Updates, MakePayment, Attendance, Chat, Subjects, CBT, PaymentHistory} from '.';
 
 const StudentPortal = () => {
     
@@ -43,7 +43,8 @@ const StudentPortal = () => {
                                     suboption === "recent-notice" ? <Updates type='latest' />:
                                     suboption === "updates-history" ? <Updates type='history' />:
                                     <Updates today />:
-                        option === "payments" ? <Payments /> :
+                        option === "payments" ? 
+                                    suboption === "payment-history" ? <PaymentHistory /> : <MakePayment /> :
                         option === "attendance" ? <Attendance /> :
                         option === "chat" ? <Chat /> :
                         option === "subjects" ? <Subjects /> :

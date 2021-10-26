@@ -25,8 +25,8 @@ const Options = ({ option, exam }) => {
                     </>
                 ) : option === 'payments' ? (
                     <>
-                        <Link className="subLink">Make Payments</Link>
                         <Link className="subLink">Payment History</Link>
+                        <Link className="subLink">Make Payments</Link>
                     </>
                 ) : option === 'subjects' ? (
                     <>
@@ -45,13 +45,13 @@ const Options = ({ option, exam }) => {
                         <Link className="subLink">Discussion Groups</Link>
                         <Link className="subLink">Recent Session</Link>
                     </>
-                ) : option === 'updates' ? (
+                ) : (
                     <>
                         <Link to="/student-portal/updates/current-notice" className="subLink">Notice</Link>
                         <Link to="/student-portal/updates/recent-notice" className="subLink">Recent Updates</Link>
                         <Link to="/student-portal/updates/updates-history" className="subLink">Updates History</Link>
                     </>
-                ) : ''
+                )
             }
         </div>
      );

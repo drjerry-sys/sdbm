@@ -1,12 +1,95 @@
 .regform {
 
     span {
+        &.titles {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 10px 0 5px;
+            padding: 10px 20px;
+            background-color: rgb(133, 133, 133);
+            width: fit-content;
+            color: white;
+        }
+    }
 
+    select {
+        padding: 10px 0;
+    }
+
+    input {
+        padding: 15px 10px;
     }
 
     .mainForm {
         width: 70%;
-        margin: 0 auto;
+        margin: 100px auto;
+
+        .subForm {
+
+            .formBody{
+                padding: 20px;
+                .fill {
+                    margin-bottom: 10px;
+                }
+                .identitySection, .next-of-kin, .educational-background, .fileUpload {
+                    display: flex;
+                    flex-direction: column;
+                    .lastFirstName, .cityLga, .names {
+                        input {
+                            width: 300px;
+                        }
+                    }
+                    .middleDob {
+                        .middle {
+                            width: 250px;
+                        }
+                    }
+                    input {
+                        margin: 5px 15px; 
+                        &.date {
+                            width: fit-content;
+                        }
+                    }
+                }
+                .parent {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    input {
+                        padding: 15px 0;
+                        margin: 5px 0;
+                    }
+                }
+
+                .fileUpload {
+                    span {
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
+                    .jss1, .sss1, .others {
+                        display: flex;
+                        flex-direction: column;
+                        label {
+                            font-size: 14px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                .submit {
+                    padding: 10px 15px;
+                    background-color: darkgreen;
+                    margin: 5px;
+                    border: 0;
+                    cursor: pointer;
+                    color: white;
+                    border-radius: 10px;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+
+        }
 
         .formTitle {
             width: fit-content;
@@ -31,5 +114,4 @@
             }
         }
     }
-
 }
