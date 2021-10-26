@@ -25,8 +25,8 @@ const Options = ({ option, exam }) => {
                     </>
                 ) : option === 'payments' ? (
                     <>
-                        <Link className="subLink">Payment History</Link>
-                        <Link className="subLink">Make Payments</Link>
+                        <Link to="/student-portal/payments/payment-history" className="subLink">Payment History</Link>
+                        <Link to="/student-portal/payments/make-payment" className="subLink">Make Payments</Link>
                     </>
                 ) : option === 'subjects' ? (
                     <>

@@ -1,5 +1,41 @@
-.MakePayment {
+.makePayment {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+
     select {
-        
+        padding: 5px;
+        border-radius: 10px;
+        margin: 5px 0;
+        border: 0;
+
+        option {
+            padding: 5px;
+        }
+    }
+
+    input {
+        padding: 5px;
+        border-radius: 10px;
+        border: 0;
+
+        &.others {
+            margin-bottom: 5px;
+        }
+
+        &.submit {
+            width: fit-content;
+            padding: 10px;
+            font-weight: 600;
+            background-color: rgba(0, 100, 0, 0.651);
+            color: white;
+            margin: 10px auto;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: var(--main-shadow);
+            }
+        }
     }
 }
