@@ -1,11 +1,101 @@
 .cbtBody {
-    margin-top: 80px;
-    background-color: black;
+    margin: 85px 20px 20px 20px ;
+    display: flex;
     
-    .timerBody {
 
+    .timerBody {
+        flex: 1;
+        background-color: rgb(236, 236, 236);
+        padding: 20px;
+        border: 1px solid gray;
+        margin-right: 10px;
+        color: var(--main-color);
+
+        p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        span {
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                padding: 5px 10px;
+                border-radius: 0px 10px 10px 0;
+                border-left: 2px solid rgb(204, 71, 71);
+
+                &.timer {
+                    border-radius: 0;
+                    width: fit-content;
+                    font-size: 20px;
+                    margin-top: 0px;
+                    border-bottom: 0;
+                    border-right: px solid rgb(133, 20, 20);
+                }
+
+                &.examInfo {
+                    border: 0;
+                    margin: 0 ;
+                }
+            }
+
+        .profilePic {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            height: 100px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            width: 170px;
+            height: 150px;
+
+            .examInfo {
+                margin-bottom: 0;
+            }
+
+            &.examInfoWrpper {
+                width: 250px;
+                margin-right: 20px;
+                background-color: inherit;
+
+                ul {
+                    margin-top: 0;
+                    list-style: none;
+                    padding-left: 5px;
+                    border-left: 2px solid rgb(15, 5, 5);
+                    li {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            
+        }
     }
     .examBody {
+        flex: 4;
+        background-color: rgb(243, 243, 243);
+        border: 1px solid gray;
+        display: flex;
+        flex-direction: column;
+        color: var(--main-color);
 
+        .subject {
+            padding: 10px 10px;
+            background-color: rgba(255, 255, 255, 0.87);
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        .instructions {
+            padding-left: 10px;
+        }
     }
 }
