@@ -5,6 +5,7 @@
     margin: 0 auto;
 
     select {
+        background-color: rgb(236, 236, 236);
         padding: 5px;
         border-radius: 10px;
         margin: 5px 0;
@@ -19,6 +20,7 @@
         padding: 5px;
         border-radius: 10px;
         border: 0;
+        background-color: rgb(255, 240, 240);
 
         &.others {
             margin-bottom: 5px;
@@ -34,6 +36,8 @@
             cursor: pointer;
 
             &:hover {
+                color: black;
+                background-color: #fff;
                 box-shadow: var(--main-shadow);
             }
         }

@@ -4,24 +4,23 @@ import moment from 'moment';
 
 const PaymentHistory = () => {
     const time = new Date()
-    const allUpdates = [
-        {id: 1, subject: 'Outstandings', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In sapiente eligendi earum! Vel ut, officiis nisi expedita dolorum illo praesentium asperiores rem odio quibusdam magni temporibus cum delectus, qui ullam.', datePosted: moment(time).startOf('ss').fromNow(), postedBy: 'Principal',},
-        {id: 2, subject: 'Outstandings', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In sapiente eligendi earum! Vel ut, officiis nisi expedita dolorum illo praesentium asperiores rem odio quibusdam magni temporibus cum delectus, qui ullam.', datePosted: moment(time).startOf('ss').fromNow(), postedBy: 'Principal',},
-        {id: 3, subject: 'Outstandings', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In sapiente eligendi earum! Vel ut, officiis nisi expedita dolorum illo praesentium asperiores rem odio quibusdam magni temporibus cum delectus, qui ullam.', datePosted: moment(time).startOf('ss').fromNow(), postedBy: 'Principal',},
+    const allFees = [
+        {id: 1, fee: 'School Fee', amount: 5000, datePaid: moment(time).startOf('ss').fromNow()},
+        {id: 2, fee: 'Uniform', amount: 5000, datePaid: moment(time).startOf('ss').fromNow()},
+        {id: 3, fee: 'Feeding', amount: 5000, datePaid: moment(time).startOf('ss').fromNow()},
     ];
 
     return ( 
         <div className="updates">
             {
-                allUpdates.map((update)=>(
-                    <div className="card" key={update.id}>
-                        <span className="subject">{update.subject}</span>
+                allFees.map((fee)=>(
+                    <div className="card" key={fee.id}>
+                        <span className="subject">{fee.fee}</span>
                         <hr />
-                        <span>{update.content}</span>
+                        <span>{fee.amount}</span>
                         <hr />
                         <div className="about">
-                            <span>Posted By: {update.postedBy}</span>
-                            <span>Date Posted: {update.datePosted}</span>
+                            <span>Date Paid: {fee.datePaid}</span>
                         </div>
                         <hr />
                     </div>

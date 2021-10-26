@@ -19,14 +19,13 @@ const Options = ({ option, exam }) => {
                     </>
                 ) : option === 'cbt' ? (
                     <>
-                        <Link className="subLink">{paper} Time Table</Link>
-                        <Link className="subLink">Take {paper}</Link>
-                        <Link className="subLink">Recent Session</Link>
+                        <Link to="/student-portal/cbt/timetable" className="subLink">{paper} Time Table</Link>
+                        <Link to={`/cbt/${exam}`} className="subLink">Take {paper}</Link>
                     </>
                 ) : option === 'payments' ? (
                     <>
-                        <Link to="/student-portal/payments/payment-history" className="subLink">Payment History</Link>
                         <Link to="/student-portal/payments/make-payment" className="subLink">Make Payments</Link>
+                        <Link to="/student-portal/payments/payment-history" className="subLink">Payment History</Link>
                     </>
                 ) : option === 'subjects' ? (
                     <>

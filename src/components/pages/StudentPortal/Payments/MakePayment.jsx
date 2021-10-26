@@ -6,7 +6,7 @@ const MakePayment = () => {
 
     return ( 
         <>
-            <div style={{backgroundColor: 'white', width: '50%', height: '2px', margin: '10px auto'}}></div>
+            <div style={{backgroundColor: 'gray', width: '50%', height: '1px', margin: '10px auto'}}></div>
             <div className="makePayment">
                 <select  id="">
                     <option value="">Select Payment</option>

@@ -3,6 +3,12 @@
     --main-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.07);
 }
 
+::-webkit-scrollbar-button {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
