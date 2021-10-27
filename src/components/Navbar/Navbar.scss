@@ -50,7 +50,6 @@
                     .profileContent {
                         display: flex;
                         flex-direction: column;
-                        z-index: 999;
                         background-color: #000;
                         padding: 15px 5px;
                         position: absolute;
@@ -58,6 +57,7 @@
                         right: 10px;
                         border-radius: 7px;
                         transition: all .35s ease-in-out;
+                        z-index: 999;
                     }
                 }
             }

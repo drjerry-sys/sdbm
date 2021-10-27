@@ -30,8 +30,8 @@ const Options = ({ option, exam }) => {
                     </>
                 ) : option === 'subjects' ? (
                     <>
-                        <Link className="subLink">List of Books</Link>
-                        <Link className="subLink">List of Subjects</Link>
+                        {/* <Link className="subLink">List of Books</Link>
+                        <Link className="subLink">List of Subjects</Link> */}
                     </>
                 ) : option === 'attendance' ? (
                     <>

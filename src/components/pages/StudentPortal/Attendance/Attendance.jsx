@@ -1,9 +1,12 @@
 import React from 'react';
-import './Attendance';
+import './Attendance.scss';
 
 const Attendance = () => {
     return ( 
-        <div className="attendance">Attendance</div>
+        <div className="attendance">
+            <span>illustration here</span>
+            <button className="mark">Mark Attendance</button>
+        </div>
      );
 }
  

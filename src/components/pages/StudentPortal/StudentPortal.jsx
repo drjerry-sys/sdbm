@@ -48,7 +48,7 @@ const StudentPortal = () => {
                                     suboption === "payment-history" ? <PaymentHistory /> : <MakePayment /> :
                         option === "attendance" ? <Attendance /> :
                         option === "chat" ? <Chat /> :
-                        option === "subjects" ? <Subjects /> :
+                        option === "subjects" ? <AllResults /> :
                         option === "cbt" ? 
                             suboption === "cbt" ? <Oops /> : <TimeTable /> : <Updates type='today' />
                      }
