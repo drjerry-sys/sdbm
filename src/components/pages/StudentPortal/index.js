@@ -9,3 +9,4 @@ export { default as Chat } from './Chat/Chat';
 export { default as Subjects } from './Subjects/Subjects';
 export { default as CBT } from '../CBT/CBT';
 export { default as TimeTable } from '../CBT/TimeTable';
+export { default as Oops } from '../../Oops/Oops';

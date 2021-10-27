@@ -7,6 +7,7 @@ const Options = ({ option, exam }) => {
 
     const paper = exam === "exam" ? 'Exam' : "Test";
     const suboption = useParams();
+    const haveExam = false;
 
     return ( 
         <div className="portalSubOptions">
@@ -20,7 +21,7 @@ const Options = ({ option, exam }) => {
                 ) : option === 'cbt' ? (
                     <>
                         <Link to="/student-portal/cbt/timetable" className="subLink">{paper} Time Table</Link>
-                        <Link to={`/cbt/${exam}`} className="subLink">Take {paper}</Link>
+                        <Link to={haveExam ? `/cbt/${exam}` : '/student-portal/cbt/cbt'} className="subLink">Take {paper}</Link>
                     </>
                 ) : option === 'payments' ? (
                     <>

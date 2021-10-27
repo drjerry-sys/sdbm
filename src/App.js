@@ -3,6 +3,7 @@ import {  Switch, Route } from 'react-router-dom';
 import { Login, ResetPassword, StudentPortal, StaffPortal, RegForm, CBT } from './components';
 
 function App() {
+  
   return (
     <div className="App">
       <Switch>

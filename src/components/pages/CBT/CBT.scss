@@ -30,7 +30,6 @@
                     font-size: 20px;
                     margin-top: 0px;
                     border-bottom: 0;
-                    border-right: px solid rgb(133, 20, 20);
                 }
 
                 &.examInfo {
@@ -86,16 +85,46 @@
         border: 1px solid gray;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
+        height: calc(100vh - 105px);
+        overflow-y: auto;
+        box-sizing: border-box;
         color: var(--main-color);
 
-        .subject {
-            padding: 10px 10px;
-            background-color: rgba(255, 255, 255, 0.87);
-            font-weight: 600;
-            margin-bottom: 3px;
+        .inst {
+            display: flex;
+            flex-direction: column;
+            position: sticky;
+            top: 0;
+            box-shadow: 5px 5px 25px rgba(26, 26, 26, 0.5);
+
+            .subject {
+                padding: 10px 10px;
+                background-color: rgba(255, 255, 255);
+                font-weight: 600;
+            }
+            .instructions {
+                padding-left: 10px;
+                padding-bottom: 5px;
+                background-color: rgba(255, 255, 255);
+            }
         }
-        .instructions {
-            padding-left: 10px;
+
+        .questions {
+            padding: 10px 5px;
+            ul{
+                list-style: none;
+                li {
+                    input {
+                        margin-right: 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        ::-webkit-scrollbar-track {
+            display: flex;
         }
     }
 }

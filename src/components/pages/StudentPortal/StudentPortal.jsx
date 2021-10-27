@@ -3,7 +3,7 @@ import Navbar from '../../Navbar/Navbar';
 import { Link, useParams } from 'react-router-dom';
 import './StudentPortal.scss';
 import Footer from '../../Footer/Footer';
-import { Options, AllResults, Summary, TimeTable, Updates, MakePayment, Attendance, Chat, Subjects, CBT, PaymentHistory} from '.';
+import { Options, AllResults, Summary, TimeTable, Updates, MakePayment, Attendance, Chat, Subjects, Oops, PaymentHistory} from '.';
 
 
 const StudentPortal = () => {
@@ -50,7 +50,7 @@ const StudentPortal = () => {
                         option === "chat" ? <Chat /> :
                         option === "subjects" ? <Subjects /> :
                         option === "cbt" ? 
-                            suboption === "cbt" ? <CBT /> : <TimeTable /> : <Updates type='today' />
+                            suboption === "cbt" ? <Oops /> : <TimeTable /> : <Updates type='today' />
                      }
                 </div>
             </div>
