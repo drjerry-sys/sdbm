@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import './Login.scss';
 import logo from '../../../assets/images/myLogo.png';
 import { Link } from 'react-router-dom';
@@ -10,9 +11,15 @@ const Login = () => {
     const [title, setTitle] = useState(true);
 
     const regNoPlaceHolder = title ? "Registration No" : 'Staff Id';
+    const navigate = useNavigate()
 
     const handleSubmit = () => {
         alert(password+regNo+title)
+        if (title) {
+            navigate('/student-portal')
+        } else {
+            navigate('/staff-portal')
+        }
     };
 
     return ( 
